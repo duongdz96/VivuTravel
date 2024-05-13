@@ -90,21 +90,29 @@
             </div>
             <div class="col-lg-12">
               <fieldset>
-                <label for="chooseDestination" class="form-label">Choose Your Destination</label>
+                <!-- <label for="chooseDestination" class="form-label">Choose Your Destination</label> -->
                 <input type="hidden" value="{{$city->name}}" name="destination" class="Name" required>
               </fieldset>
             </div>
 
             <div class="col-lg-12">
-              <fieldset>
-                <label for="chooseDestination" class="form-label">user id</label>
-                <input type="hidden" value="{{Auth::user()->id}}" name="user_id" class="Name" required>
-              </fieldset>
+
+              @if (isset(Auth::user()->id))
+
+        <fieldset>
+          <!-- <label for="chooseDestination" class="form-label">user id</label> -->
+          <input type="hidden" value="{{Auth::user()->id}}" name="user_id" class="Name" required>
+        </fieldset>
+      @endif
             </div>
 
             <div class="col-lg-12">
               <fieldset>
-                <button type="submit" class="main-button">Make Your Reservation Now</button>
+                @if (isset(Auth::user()->id))
+          <button type="submit" class="main-button">Make Your Reservation Now</button>
+        @else
+      <p class="alert alert-success">Login to make a booking</p>
+    @endif
               </fieldset>
             </div>
           </div>
