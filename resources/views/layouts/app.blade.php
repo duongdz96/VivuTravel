@@ -46,7 +46,7 @@
               <ul class="nav">
                 <li><a href="{{route('home')}}" class="active">Home</a></li>
                 <!-- <li><a href="about.html">About</a></li> -->
-                <li><a href="deals.html">Deals</a></li>
+                <li><a href="{{route('traveling.deals')}}">Deals</a></li>
 
                 @guest
           @if (Route::has('login'))
@@ -64,6 +64,10 @@
             </a>
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-black" href="{{ route('users.bookings') }}">
+              My Bookings
+              </a>
+
               <a class="dropdown-item text-black" href="{{ route('logout') }}" onclick="event.preventDefault();
       document.getElementById('logout-form').submit();">
               {{ __('Logout') }}

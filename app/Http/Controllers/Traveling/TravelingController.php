@@ -8,6 +8,7 @@ use App\Models\Country\Country;
 use App\Models\Reservation\Reservation;
 use Auth;
 use Illuminate\Http\Request;
+use Redirect;
 use Session;
 
 
@@ -58,7 +59,7 @@ class TravelingController extends Controller
 
         $newPrice = Session::get($price);
 
-        echo "reservation is made successfully";
+        return Redirect::route('traveling.pay');
       }
     } else {
       echo "Invalid date";
@@ -69,6 +70,32 @@ class TravelingController extends Controller
     // return view('traveling.reservation', compact('city'));
   }
 
+  public function payWithPaypal()
+  {
+    return view('traveling.pay');
+  }
+  public function success()
+  {
+    Session::forget('price');
+    return view('traveling.success');
+  }
 
+  public function deals()
+  {
+    $cities = City::select()->orderBy('id', 'desc')->take(4)->get();
+    $countries = Country::all();
+    return view('traveling.deals', compact('cities', 'countries'));
+  }
+
+  public function searchDeals(Request $request)
+  {
+    $country_id = $request->get('country_id');
+    $price = $request->get('price');
+
+    $searches = City::where('country_id', $country_id)->where('price', '<=', $price)->orderBy('id', 'desc')->take(4)->get();
+
+    $countries = Country::all();
+    return view('traveling.searchdeals', compact('searches', 'countries'));
+  }
 
 }
