@@ -49,7 +49,9 @@
 
                   </select>
                 </div>
-
+                @if($errors->has('status'))
+                <p class="alert alert-danger">{{ $errors->first('status') }}</p>
+            @endif
                 <br>
               
 

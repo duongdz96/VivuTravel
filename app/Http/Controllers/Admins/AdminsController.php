@@ -190,6 +190,16 @@ class AdminsController extends Controller
 
         return view('admins.editbooking', compact('bookings'));
      }
+
+
+     public function  updateBookings(Request $request, $id) { 
+
+        $booking = Reservation::find($id);
+
+        $booking->update($request->all());
+
+        return view('admins.editbooking', compact('bookings'));
+     }
 }   
 
 
