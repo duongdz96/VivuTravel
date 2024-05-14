@@ -29,6 +29,7 @@
                     <th scope="col">destination</th>
                     <th scope="col">status</th>
                     <th scope="col">payment</th>
+                    <th scope="col">change status</th>
                     <th scope="col">delete</th>
                   </tr>
                 </thead>
@@ -38,12 +39,14 @@
                     <tr>
                       <th scope="row">{{$booking->id}}</th>
                       <td>{{$booking->name}}</td>
+                      <td>{{$booking->phone_number}}</td>
                       <td>{{$booking->num_of_guests}}</td>
                       <td>{{$booking->check_in_date}}</td>
                       <td>{{$booking->destination}}</td>
                       <td>{{$booking->status}}</td>
                       <td>{{$booking->price}}</td>
-                      <td><a href="{{route('edit.bookings', $booking->id)}}" class="btn btn-warning text-white"</a></td>
+                      <td><a href="{{route('edit.bookings', $booking->id)}}" class="btn btn-warning text-white">change status</a>
+                      </td>
                        <td>
                         <a href="{{route('delete.bookings', $booking->id)}}" class="btn btn-danger  text-center ">delete
                         </a>

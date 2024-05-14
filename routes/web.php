@@ -84,6 +84,7 @@ Route :: get('/delete-cities/{id}', [App\Http\Controllers\Admins\AdminsControlle
 //bookings
 Route :: get('/all-bookings', [App\Http\Controllers\Admins\AdminsController::class, 'allBookings'])->name('all.bookings');
 Route :: get('/edit-bookings/{id}', [App\Http\Controllers\Admins\AdminsController::class, 'editBookings'])->name('edit.bookings');
+Route :: get('/update-bookings/{id}', [App\Http\Controllers\Admins\AdminsController::class, 'updateBookings'])->name('update.bookings');
 Route :: get('/delete-bookings/{id}', [App\Http\Controllers\Admins\AdminsController::class, 'deleteBookings'])->name('delete.bookings');
 });
 

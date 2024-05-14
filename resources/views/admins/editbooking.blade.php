@@ -8,7 +8,7 @@
             <div class="card-body">
               <h5 class="card-title mb-5 d-inline">Update Booking Status</h5>
               <p>Current Status<b>{{$booking->status}}</b></p>
-          <form method="POST" action="" enctype="multipart/form-data">
+          <form method="POST" action="{{ route('update.bookings', $booking->id)}}" enctype="multipart/form-data">
                 <!-- Email input -->
                 @csrf
                 <div class="form-outline mb-4 mt-4">
