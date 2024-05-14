@@ -9,11 +9,10 @@
       <div class="col-lg-12">
         <div class="content">
           <div class="blur-bg"></div>
-          <h4>EXPLORE OUR COUNTRY</h4>
+          <h4>Khám phá đất nước {{$country->name}}</h4>
           <div class="line-dec"></div>
           <h2>Welcome To {{$country->name}}</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt uttersi labore et
-            dolore magna aliqua is ipsum suspendisse ultrices gravida</p>
+          <p>Tận hưởng kì nghỉ dưỡng tại {{$country->name}}</p>
           <div class="main-button">
           </div>
         </div>
@@ -29,7 +28,7 @@
       <div class="slider-content">
         <div class="row">
           <div class="col-lg-12">
-            <h2>{{$country->name}} <em>Cities &amp; Towns</em></h2>
+            <h2>Những điểm đến tại nơi đây</h2>
           </div>
           <div class="col-lg-12">
             <div class="owl-cites-town owl-carousel">
@@ -55,8 +54,8 @@
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
         <div class="section-heading text-center">
-          <h2>Best Weekly Offers In Each City</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <h2>Ưu đãi hấp dẫn cho những chuyến đi</h2>
+          <p>Cùng Vivu Travel giúp bạn chọn những chuyến đi với những ưu đãi hấp dẫn !</p>
         </div>
       </div>
     </div>
@@ -71,16 +70,16 @@
         <img src="{{asset('assets/images/' . $city->image . '')}}" alt="">
         <div class="text">
           <h4>{{$city->name}}<br><span></span></h4>
-          <h6>${{$city->price}}<br><span>/person</span></h6>
+          <h6>${{$city->price}}<br><span>/người</span></h6>
           <div class="line-dec"></div>
           <ul>
           <li>Deal Includes:</li>
-          <li><i class="fa fa-taxi"></i> {{$city->num_days}} Days Trip > Hotel Included</li>
-          <li><i class="fa fa-plane"></i> Airplane Bill Included</li>
-          <li><i class="fa fa-building"></i> Daily Places Visit</li>
+          <li><i class="fa fa-taxi"></i> {{$city->num_days}} ngày > Bao gồm khách sạn</li>
+          <li><i class="fa fa-plane"></i> Bao gồm vé máy bay</li>
+          <li><i class="fa fa-building"></i> Bao gồm vé vào những điểm tham quan</li>
           </ul>
           <div class="main-button">
-          <a href="{{route('traveling.reservation', $city->id)}}">Make a Reservation</a>
+          <a href="{{route('traveling.reservation', $city->id)}}">Đặt ngay</a>
           </div>
         </div>
         </div>
@@ -104,8 +103,8 @@
       </div>
       <div class="col-lg-6">
         <div class="section-heading">
-          <h2>Discover More About Our Country</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <h2>Khám phá thêm nhiều điều hấp dẫn tại {{$country->name}}</h2>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->
         </div>
         <div class="row">
 
@@ -124,8 +123,8 @@
             </div>
           </div>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->
 
       </div>
     </div>

@@ -12,9 +12,9 @@
       style="background-image: url('{{asset('assets/images/' . $country->image . '')}}')">
       <div class="banner-inner-wrapper header-text">
       <div class="main-caption">
-        <h2>Take a Glimpse Into The Beautiful Country Of:</h2>
+        <h2>Tận hưởng những kì nghỉ tại đất nước: </h2>
         <h1>{{$country->name}}</h1>
-        <div class="border-button"><a href="{{route('traveling.about', $country->id)}}">Go There</a>
+        <div class="border-button"><a href="{{route('traveling.about', $country->id)}}">Khám phá</a>
         </div>
       </div>
       <div class="container">
@@ -24,19 +24,19 @@
           <div class="row">
             <div class="col-lg-3 col-sm-6 col-6">
             <i class="fa fa-user"></i>
-            <h4><span>Population:</span><br>{{$country->population}} M</h4>
+            <h4><span>Dân số:</span><br>{{$country->population}} M</h4>
             </div>
             <div class="col-lg-3 col-sm-6 col-6">
             <i class="fa fa-globe"></i>
-            <h4><span>Territory:</span><br>{{$country->territory}} KM<em>2</em></h4>
+            <h4><span>Diện tích:</span><br>{{$country->territory}} KM<em>2</em></h4>
             </div>
             <div class="col-lg-3 col-sm-6 col-6">
             <i class="fa fa-home"></i>
-            <h4><span>AVG Price:</span><br>${{$country->avg_price}}</h4>
+            <h4><span>Chi phí:</span><br>${{$country->avg_price}}</h4>
             </div>
             <div class="col-lg-3 col-sm-6 col-6">
             <div class="main-button">
-              <a href="{{route('traveling.about', $country->id)}}">Explore More</a>
+              <a href="{{route('traveling.about', $country->id)}}">Tìm hiểu thêm</a>
             </div>
             </div>
           </div>
@@ -65,9 +65,8 @@
     <div class="row">
       <div class="col-lg-5">
         <div class="section-heading">
-          <h2>Visit One Of Our Countries Now</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore.</p>
+          <h2>Ghé thăm những đất nước xinh đẹp tại Châu Á</h2>
+          <p>Ghé thăm những đất nước xinh đẹp tại Châu Á, với những bãi biển trong xanh, những cánh đồng bất tận</p>
         </div>
       </div>
     </div>
@@ -97,9 +96,9 @@
               <li><i class="fa fa-globe"></i> {{$country->territory}} km2</li>
               <li><i class="fa fa-home"></i> ${{$country->avg_price}}</li>
             </ul>
-            <div class="text-button">
-              <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
-            </div>
+            <!-- <div class="text-button">
+        <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
+        </div> -->
             </div>
           </div>
           </div>
