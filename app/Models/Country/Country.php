@@ -10,7 +10,7 @@ class Country extends Model
     use HasFactory;
 
     protected $table = "countries";
-    protected $fillables = [
+    protected $fillable = [
         "name",
         "population",
         "territory",

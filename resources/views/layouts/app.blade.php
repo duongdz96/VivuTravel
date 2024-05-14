@@ -68,8 +68,9 @@
               My Bookings
               </a>
 
-              <a class="dropdown-item text-black" href="{{ route('logout') }}" onclick="event.preventDefault();
-      document.getElementById('logout-form').submit();">
+              <a class="dropdown-item text-black" href="{{ route('logout') }}" 
+              onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
               {{ __('Logout') }}
               </a>
 
