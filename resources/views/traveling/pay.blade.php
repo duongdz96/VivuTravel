@@ -42,6 +42,9 @@
           window.location.href = 'http://127.0.0.1:8000/traveling/success';
         });
       }
+      onError: (err) => {
+          window.location.href = 'http://127.0.0.1:8000/traveling/failed';
+      }
     }).render('#paypal-button-container');
   </script>
 

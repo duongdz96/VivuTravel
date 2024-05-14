@@ -34,6 +34,7 @@ Route::group(['prefix' => 'traveling'], function () {
     //paying
     Route::get('/pay', [App\Http\Controllers\Traveling\TravelingController::class, 'payWithPaypal'])->name('traveling.pay')->middleware('check.for.price');
     Route::get('/success', [App\Http\Controllers\Traveling\TravelingController::class, 'success'])->name('traveling.success')->middleware('check.for.price');
+    Route::get('/failed', [App\Http\Controllers\Traveling\TravelingController::class, 'failed'])->name('traveling.failed')->middleware('check.for.price');
 
     //deals
     Route::get('/deals', [App\Http\Controllers\Traveling\TravelingController::class, 'deals'])->name('traveling.deals');
