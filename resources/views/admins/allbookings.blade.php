@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <div class="row">
         <div class="col">
           <div class="card">
@@ -24,39 +23,20 @@
                   </tr>
                 </thead>
                 <tbody>
+                    @foreach($bookings as $booking)
+
                   <tr>
-                    <th scope="row">1</th>
-                    <td>MOhamed</td>
-                    <td>33333</td>
-                    <td>4</td>
-                    <td>23-3-19</td>
-                    <td>Berlin</td>
-                    <td>Pending</td>
-                    <td>$104</td>
+                    <th scope="row">{{$booking->id}}</th>
+                    <td>{{$booking->name}}</td>
+                    <td>{{$booking->num_of_guests}}</td>
+                    <td>{{$booking->check_in_date}}</td>
+                    <td>{{$booking->destination}}</td>
+                    <td>{{$booking->status}}</td>
+                    <td>{{$booking->price}}</td>
+                    <td><a href="{{route('edit.bookings', $booking->id)}}" class="btn btn-warning text-white
                      <td><a href="delete-posts.html" class="btn btn-danger  text-center ">delete</a></td>
                   </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>MOhamed</td>
-                    <td>33333</td>
-                    <td>4</td>
-                    <td>23-3-19</td>
-                    <td>Berlin</td>
-                    <td>Pending</td>
-                    <td>$104</td>
-                     <td><a href="delete-posts.html" class="btn btn-danger  text-center ">delete</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>MOhamed</td>
-                    <td>33333</td>
-                    <td>4</td>
-                    <td>23-3-19</td>
-                    <td>Berlin</td>
-                    <td>Pending</td>
-                    <td>$104</td>
-                     <td><a href="delete-posts.html" class="btn btn-danger  text-center ">delete</a></td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table> 
             </div>
