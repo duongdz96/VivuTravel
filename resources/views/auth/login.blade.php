@@ -11,11 +11,11 @@
           @csrf
           <div class="row">
             <div class="col-lg-12">
-              <h4>Login</h4>
+              <h4>Đăng nhập</h4>
             </div>
             <div class="col-md-12">
               <fieldset>
-                <label for="Name" class="form-label">Your Email</label>
+                <label for="Name" class="form-label">Email của bạn</label>
                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
                   value="{{ old('email') }}" required autocomplete="email" autofocus>
 
@@ -30,7 +30,7 @@
 
             <div class="col-md-12">
               <fieldset>
-                <label for="Name" class="form-label">Your Password</label>
+                <label for="Name" class="form-label">Mật khẩu</label>
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
                   name="password" required autocomplete="current-password">
 
@@ -44,7 +44,7 @@
             </div>
             <div class="col-lg-12">
               <fieldset>
-                <button type="submit" class="main-button">login</button>
+                <button type="submit" class="main-button">Đăng nhập</button>
 
               </fieldset>
             </div>

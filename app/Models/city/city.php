@@ -9,12 +9,11 @@ class city extends Model
 {
     use HasFactory;
     protected $table = "cities";
-    protected $fillables = [
+    protected $fillable = [
         "name",
-        "image",
         "price",
-        "num_date",
-        "description",
+        "image",
+        "num_days",
         "country_id"
     ];
 
