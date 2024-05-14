@@ -79,6 +79,11 @@ class TravelingController extends Controller
     Session::forget('price');
     return view('traveling.success');
   }
+  public function failed()
+  {
+    Session::forget('price');
+    return view('traveling.failed');
+  }
 
   public function deals()
   {
