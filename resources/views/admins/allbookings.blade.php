@@ -6,6 +6,16 @@
         <div class="col">
           <div class="card">
             <div class="card-body">
+              @if(session()->has('update'))
+            <div class="alert alert-success">
+                {{session()->get('update')}}
+            </div>
+            @endif
+              @if(session()->has('delete'))
+            <div class="alert alert-success">
+                {{session()->get('delete')}}
+            </div>
+            @endif
               <h5 class="card-title mb-4 d-inline">Bookings</h5>
             
               <table class="table">
@@ -25,17 +35,20 @@
                 <tbody>
                     @foreach($bookings as $booking)
 
-                  <tr>
-                    <th scope="row">{{$booking->id}}</th>
-                    <td>{{$booking->name}}</td>
-                    <td>{{$booking->num_of_guests}}</td>
-                    <td>{{$booking->check_in_date}}</td>
-                    <td>{{$booking->destination}}</td>
-                    <td>{{$booking->status}}</td>
-                    <td>{{$booking->price}}</td>
-                    <td><a href="{{route('edit.bookings', $booking->id)}}" class="btn btn-warning text-white
-                     <td><a href="delete-posts.html" class="btn btn-danger  text-center ">delete</a></td>
-                  </tr>
+                    <tr>
+                      <th scope="row">{{$booking->id}}</th>
+                      <td>{{$booking->name}}</td>
+                      <td>{{$booking->num_of_guests}}</td>
+                      <td>{{$booking->check_in_date}}</td>
+                      <td>{{$booking->destination}}</td>
+                      <td>{{$booking->status}}</td>
+                      <td>{{$booking->price}}</td>
+                      <td><a href="{{route('edit.bookings', $booking->id)}}" class="btn btn-warning text-white"</a></td>
+                       <td>
+                        <a href="{{route('delete.bookings', $booking->id)}}" class="btn btn-danger  text-center ">delete
+                        </a>
+                       </td>
+                    </tr>
                   @endforeach
                 </tbody>
               </table> 
